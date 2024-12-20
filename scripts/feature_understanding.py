@@ -10,9 +10,7 @@ def plot_bar(data, column, top):
     return ax
 
 def plot_kde(data, column):
-    ax = data['Handset Type'].value_counts()\
-                        .head(10)\
-                        .plot(kind='kde')
+    ax = column.value_counts().plot(kind='kde')
     return ax
 
 def top_10_handset(data):
